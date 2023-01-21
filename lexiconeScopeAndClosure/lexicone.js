@@ -16,3 +16,5 @@ parentFunction()
 /**
  * Lexicone scope and not closure. The child function has access to parent function and global variables.
  */
+
+
