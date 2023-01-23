@@ -14,3 +14,5 @@ musician.__proto__ = person /**Old method of doing things */
 
 console.log(musician.alive); /**True inherited alive attribute */
 console.log(musician);
+
+
