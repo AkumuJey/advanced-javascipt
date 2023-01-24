@@ -26,8 +26,3 @@ console.log(guiterist.alive);
 console.log(guiterist.plays);
 console.log(guiterist.strings);
 console.log(guiterist);
-
-/**Circle references are not allowed in proto */
-/**Proto value must be an object */
-/**An object can only inherit from another object */
-
