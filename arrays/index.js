@@ -45,3 +45,16 @@ console.log(megaArray);
 const myArray = [[1,2,3], [4,5], ['Akumu', 'Jey']]
 console.log(myArray);
 console.log(myArray.flat());
+
+const homes = ['Asumbi', 'Rangwe', 'Maseno', 'Blocks']
+homes.splice(2, 0, 'KNH', 'Hall 10') //The first is the starting point, second number to be deleted, the rest names to be added
+console.log(homes);
+
+//splice can also be sued to delete elements in an array e.g homes.slice(0, 1)
+
+
+let nyumbani = homes.slice(2) //This takes everything from 2 onwards
+let qwetu = homes.slice(0,1) //Takes 0 only
+
+console.log(nyumbani);
+console.log(qwetu);
