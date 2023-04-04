@@ -1,1 +1,1 @@
-console.log(names.sort());
+console.log(sumRight);
