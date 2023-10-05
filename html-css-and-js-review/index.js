@@ -17,6 +17,7 @@ imageChanger.addEventListener('click', () => {
     } else{
         myImage.setAttribute('src', imageOne)
     }
+    document.title = 'Olee'
 })
 window.addEventListener('load', () => {
     const userInput = prompt('Who are you')
