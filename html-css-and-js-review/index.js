@@ -19,8 +19,8 @@ imageChanger.addEventListener('click', () => {
     }
     document.title = 'Olee'
 })
-window.addEventListener('load', () => {
-    const userInput = prompt('Who are you')
-    let x = confirm(`Are you ready ${userInput}`)
-    alert(`Bingo! ${x}`)
-})
+// window.addEventListener('load', () => {
+//     const userInput = prompt('Who are you')
+//     let x = confirm(`Are you ready ${userInput}`)
+//     alert(`Bingo! ${x}`)
+// })
