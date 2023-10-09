@@ -43,3 +43,15 @@ video{
 h3 + p {
     background: white;
 }
+h3 + p::first-line{
+    font-size: 14px;
+    color: red;
+}
+.trial {
+    background-color: red;
+    width: calc(90% - 200px);
+}
+
+.paragraph > p{
+    background-color: yellow;
+}
