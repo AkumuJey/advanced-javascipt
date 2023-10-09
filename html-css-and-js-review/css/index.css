@@ -55,3 +55,21 @@ h3 + p::first-line{
 .paragraph > p{
     background-color: yellow;
 }
+.paragraph *:first-child{
+    background-color: red;
+    color: blue;
+    font-size: 20px;
+}
+.learning{
+    font-size: 17px;
+}
+.learning:hover::before{
+    content: 'I love CSS';
+    padding-right: 10px;
+    color: #ff9500;
+}
+.learning::after{
+    content: 'I am done';
+    padding-left: 10px;
+    color: #ff9500;
+}
