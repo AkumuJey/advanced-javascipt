@@ -73,3 +73,17 @@ h3 + p::first-line{
     padding-left: 10px;
     color: #ff9500;
 }
+a:link {
+}
+
+a:visited {
+}
+
+a:focus {
+}
+
+a:hover {
+}
+
+a:active {
+}
