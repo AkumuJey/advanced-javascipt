@@ -59,6 +59,17 @@ body{
  padding: 2px;   
 }
 
+.float{
+    background-color: white;
+    padding: 3px;
+}
+.box{
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
 h1{
     margin: 0;
     padding: 20px 0;
