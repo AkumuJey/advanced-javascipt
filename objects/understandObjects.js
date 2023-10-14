@@ -46,14 +46,19 @@ giles.introduceSelf()
 
 class classRoom extends School {
     announcement
-    constructor(name, announcement){
+    #year
+    constructor(name, announcement, year){
         super(name)
         this.announcement=announcement;
+        this.#year = year
     }
     helloClass() {
         console.log(`${this.announcement}`);
     }
+    canPlayGolf() {
+        return this.#year > 5
+    }
 }
 
-const w = new classRoom('Maseno', 'Best class')
-w.helloClass()
+const w = new classRoom('Maseno', 'Best class', 4)
+console.log(w.canPlayGolf());
