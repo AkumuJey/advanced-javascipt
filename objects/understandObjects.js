@@ -1,3 +1,5 @@
+const jsonData = require('./data.json') 
+
 const person = {
     name: 'Akumu',
     age: 45,
@@ -62,3 +64,8 @@ class classRoom extends School {
 
 const w = new classRoom('Maseno', 'Best class', 4)
 console.log(w.canPlayGolf());
+
+const displayJson = () => {
+    console.log(jsonData);
+}
+displayJson();
