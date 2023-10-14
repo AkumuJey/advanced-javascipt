@@ -1,3 +1,29 @@
+let cameraButton = document.getElementById('camera')
+
+cameraButton.addEventListener('click', () => webcam())
+
+
+const webcam = () => {
+    let constraints = {
+        video: true,
+        audio: true
+    }
+    navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
+        let webvideo = document.getElementById('webvideo')
+        webvideo.srcObject = mediaStream
+        webvideo.play()
+    }).catch((error) => {
+        if (error.name === 'NotAllowedError') {
+            console.log('Permission to access camera and microphone was denied.');
+        } else {
+            console.error('Error accessing camera and microphone:', error);
+        }
+    })
+}
+
+
+  
+
 const myHeading = document.querySelector('h2')
 myHeading.textContent = "Wow!"
 
