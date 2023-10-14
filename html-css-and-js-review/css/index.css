@@ -1,3 +1,27 @@
+.template{
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1fr);
+    gap: 10px;
+    text-align: center;
+}
+.subgrid{
+    background-color: white;
+    color: black;
+    grid-column: 1/4;
+    display: grid;
+    grid-row: 2/4;
+    gap: inherit;
+    grid-template-columns: subgrid;
+    grid-template-rows: 2fr 1fr;
+}
+.subgrid > div {
+    background-color: slategray;
+}
+
+
 div[data-start] {
     color: red;
 }
@@ -36,13 +60,13 @@ body{
     color: wheat;
     display: flex;
     font-size: 16px;
+    flex-direction: column;
     
 }
 .flex .child {
     background-color: green;
     padding: 2px;
     flex: 1;
-    
 }
 
 .grid {
