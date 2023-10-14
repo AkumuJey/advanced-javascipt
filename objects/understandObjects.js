@@ -17,3 +17,43 @@ person.countriesVisited = countriesVisited
 console.log(person);
 person.greeting()
 person.reminder()
+person.reminder = () => console.log('Hellow World');
+
+person.reminder()
+
+console.log(Object.hasOwn(person));
+console.log(Object.hasOwnProperty(person));
+
+// const myNotification = new Notification('Hello')
+// myNotification.body()
+
+console.log(Object.getPrototypeOf(person))
+
+class School{
+    name
+    constructor(name) {
+        this.name = name
+    }
+    introduceSelf() {
+        console.log(`Hi! I'm ${this.name}`);
+    }
+}
+
+const giles = new School("Giles");
+giles.introduceSelf();
+giles.name = "Yell"
+giles.introduceSelf()
+
+class classRoom extends School {
+    announcement
+    constructor(name, announcement){
+        super(name)
+        this.announcement=announcement;
+    }
+    helloClass() {
+        console.log(`${this.announcement}`);
+    }
+}
+
+const w = new classRoom('Maseno', 'Best class')
+w.helloClass()
