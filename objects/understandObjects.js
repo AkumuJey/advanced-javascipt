@@ -1,6 +1,7 @@
 const person = {
     name: 'Akumu',
-    age: 45
+    age: 45,
+    greeting: () => console.log("Good Morning!")
 }
 
 const countriesVisited = ['Kenya', {
@@ -11,3 +12,4 @@ const countriesVisited = ['Kenya', {
 person.countriesVisited = countriesVisited
 
 console.log(person);
+person.greeting()
