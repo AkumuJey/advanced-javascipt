@@ -42,6 +42,20 @@ class LinkedList {
         }
         this.size ++
     }
+    //insert at given index
+    insertAtIndex(data, index){
+        if(index > 0 && index > this.size) {
+            return
+        }
+        if (index === 0) {
+            this.insertFirstNode(data)
+            return
+        }
+        const node = new Node(data)
+        let current; let previous
+        
+    }
+
     //print linked list
     printListData(){
         let current = this.head
