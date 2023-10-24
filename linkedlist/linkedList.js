@@ -72,7 +72,7 @@ class LinkedList {
         }
     }
     //get index
-    getIndex(index){
+    getElementIndex(index){
         let current = this.head
         let count = 0
         while(count !== index){
@@ -81,6 +81,20 @@ class LinkedList {
         }
         console.log(current.data);
     }
+    //index
+    getIndex(element) {
+        let current = this.head
+        let count = 0
+        let elementIndices = []
+        while (current.next) {
+            if (current.data === element) {
+                elementIndices.push(count)
+            }
+            current = current.next
+            count ++
+        }
+        console.log(elementIndices)
+    }
 }
 
 const ll = new LinkedList()
@@ -88,9 +102,11 @@ ll.insertFirstNode(100)
 ll.insertFirstNode(300)
 ll.insertLastNode(1000)
 ll.insertAtIndex(2, 1)
+ll.insertAtIndex(2, 3)
+ll.getIndex(2)
 // console.log(ll)
 
 ll.printListData()
-ll.getIndex(3)
+ll.getElementIndex(3)
 
 
