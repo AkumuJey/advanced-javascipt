@@ -32,7 +32,7 @@ class LinkedList {
         let node = new Node(data)
         let current;
         if(!this.head) {
-            this.head = node
+            insertFirstNode(data)
         } else {
             current = this.head
             while(current.next) {
@@ -52,8 +52,15 @@ class LinkedList {
             return
         }
         const node = new Node(data)
-        let current; let previous
-        
+        let current = this.head; let previous
+        let count = 0
+        while (count !== index) {
+            previous = current
+            current = current.next
+            count ++
+        }
+        previous.next = node
+        node.next = current
     }
 
     //print linked list
@@ -64,12 +71,26 @@ class LinkedList {
             current = current.next
         }
     }
+    //get index
+    getIndex(index){
+        let current = this.head
+        let count = 0
+        while(count !== index){
+            current = current.next
+            count++
+        }
+        console.log(current.data);
+    }
 }
 
 const ll = new LinkedList()
 ll.insertFirstNode(100)
 ll.insertFirstNode(300)
 ll.insertLastNode(1000)
+ll.insertAtIndex(2, 1)
 // console.log(ll)
 
 ll.printListData()
+ll.getIndex(3)
+
+
