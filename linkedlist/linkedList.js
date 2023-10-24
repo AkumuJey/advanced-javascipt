@@ -66,10 +66,33 @@ class LinkedList {
     //print linked list
     printListData(){
         let current = this.head
+        let desiredArray = []
         while(current !== null){
-            console.log(current.data)
+            desiredArray.push(current.data)
             current = current.next
         }
+        console.log(desiredArray)
+    }
+    //remove at index
+
+    removeAtIndex(index){
+        let current = this.head
+        let previous
+        if (index === 0) {
+            this.head = current.next
+            return
+        }
+        let count = 0
+        while(count !== index){
+            previous = current
+            current = current.next
+            count++
+        }
+        if (count === index) {
+            let nextOne = current.next
+            previous.next = nextOne
+        }
+        console.log(`Deleted ${current.data}`);
     }
     //get index
     getElementIndex(index){
@@ -101,12 +124,16 @@ const ll = new LinkedList()
 ll.insertFirstNode(100)
 ll.insertFirstNode(300)
 ll.insertLastNode(1000)
-ll.insertAtIndex(2, 1)
-ll.insertAtIndex(2, 3)
-ll.getIndex(2)
+// ll.insertAtIndex(2, 1)
+// ll.insertAtIndex(2, 3)
+// ll.getIndex(2)
 // console.log(ll)
 
+// ll.printListData()
+// ll.getElementIndex(3)
+// ll.removeAtIndex(0)
 ll.printListData()
-ll.getElementIndex(3)
+ll.insertAtIndex(5, 1)
+ll.printListData()
 
 
